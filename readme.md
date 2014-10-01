@@ -25,5 +25,5 @@ Woo-Product-Cat is fully responsive and can fit any of your WordPress theme with
 
 #Use:
 
-1. After activate the plugin, create a new page or post. In the body section write this shortcode [product-cat].
+1. After activate the plugin, create a new page or post. In the body section write this shortcode `[product-cat]`.
    Save the page/post and check the link. You'll see a nicely designed category wise product listing.
