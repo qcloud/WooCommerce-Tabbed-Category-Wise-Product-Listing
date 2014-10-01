@@ -4,8 +4,6 @@ WooCommerce-Tabbed-Category-Wise-Product-Listing
 WordPress WooCommerce Tabbed Category Wise Product Listing
 
 
-
-
 #Description:
 
 Have you ever tried a Woo-Commerce plugin that allow you to view products category wise ?
@@ -24,7 +22,7 @@ Woo-Product-Cat is fully responsive and can fit any of your WordPress theme with
 5. You are done.
 
 
-#Use:
+#Usage:
 
 1. After activate the plugin, create a new page or post. In the body section write this shortcode [product-cat].
    Save the page/post and check the link. You'll see a nicely designed category wise product listing.
