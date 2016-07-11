@@ -24,6 +24,12 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 
     add_action('init', 'woo_plugin_scripts');
     add_action('init', 'woo_scroll_to_scripts');
+
+    wp_register_script('prefix_bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js');
+    wp_enqueue_script('prefix_bootstrap');
+
+    wp_register_style('prefix_bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+    wp_enqueue_style('prefix_bootstrap');
     function woo_plugin_scripts()
     {
         wp_enqueue_script('woo-product-cat-js', plugins_url('/js/woo-scripts.js', __FILE__), array('jquery'));
@@ -32,6 +38,8 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 
     function woo_scroll_to_scripts()
     {
+
+       // wp_enqueue_script('woo-scroll-to-js', plugins_url('/bootstrap/js/bootstrap.min.js', __FILE__), array('jquery'));
         wp_enqueue_script('woo-scroll-to-js', plugins_url('/js/jquery.scrollTo-1.4.3.1-min.js', __FILE__), array('jquery'));
     }
 
@@ -43,7 +51,9 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
     function woo_plugin_styles()
     {
         wp_register_style('woo_plugin_style', plugin_dir_url(__FILE__) . 'css/woo-styles.css');
+        //wp_register_style('woo_plugin_bootstrap', plugin_dir_url(__FILE__) . 'bootstrap/css/bootstrap.min.css');
         wp_enqueue_style('woo_plugin_style');
+        //wp_enqueue_style('woo_plugin_bootstrap');
     }
 
 
@@ -64,7 +74,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
         </div>
 
 
-    <?
+        <?
     }
 
 
@@ -121,21 +131,25 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                 </div>
             </div>
             <div class="product_content" id="tabs_container">
-                <?php
-                $i = 0;
-                foreach ($product_categories as $cat) {
-                    ?>
-                    <div class="each_cat<?php if ($i == 0) {
-                        echo " active";
-                    } ?>" id="product-<?php echo $cat->slug; ?>">
+                <div class="row">
+                    <div class="col-md-12">
                         <?php
-                        echo do_shortcode('[product_category category="' . $cat->name . '" per_page="12" columns="4" orderby="date" order="desc"]');
-                        ?></div>
-                    <?php $i++;
-                } ?>
+                        $i = 0;
+                        foreach ($product_categories as $cat) {
+                            ?>
+                            <div class="each_cat<?php if ($i == 0) {
+                                echo " active";
+                            } ?>" id="product-<?php echo $cat->slug; ?>">
+                                <?php
+                                echo do_shortcode('[product_category category="' . $cat->name . '" per_page="12" columns="3" orderby="date" order="desc"]');
+                                ?></div>
+                            <?php $i++;
+                        } ?>
+                    </div>
+                </div>
             </div>
         </div>
-    <?php
+        <?php
     }
 
     /**
