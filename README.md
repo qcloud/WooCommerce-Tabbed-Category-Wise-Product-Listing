@@ -1,4 +1,5 @@
 ===Woo Tabbed Category Product Listing===
+
 Contributors: www.QuantumCloud.com
 Donate link: http://www.quantumcloud.com
 Tags: WooCommerce Tabbed Category Product Listing, WooCommerce products, WooCommerce, Products by catergory, Woocommerce product categories, Tabbed Category Product Listing for WooCommerce
