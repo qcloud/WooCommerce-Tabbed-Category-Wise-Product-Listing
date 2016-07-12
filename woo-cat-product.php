@@ -1,11 +1,11 @@
 <?php
 
 /*
-Plugin Name: WooCommerce Category Product
-Plugin URI:
-Description: A WooCommerce Plugin for dynamically load product under a selected category.
-Author: QuantumCloud
-Version: 1.0
+Plugin Name: Woo Tabbed Category Product Listing
+Plugin URI: http://www.quantumcloud.com/blog/woocommerce-tabbed-category-wise-product-listing/
+Description: A WooCommerce Plugin to dynamically load products from selected category in tabs.
+Author: http://www.QuantumCloud.com/
+Version: 0.9.1
 Author URI:
 */
 
@@ -15,7 +15,7 @@ Author URI:
  */
 
 if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
-    // Put your plugin code here
+    // Plugin Code Below
 
 
     /**
@@ -39,7 +39,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
     function woo_scroll_to_scripts()
     {
 
-       // wp_enqueue_script('woo-scroll-to-js', plugins_url('/bootstrap/js/bootstrap.min.js', __FILE__), array('jquery'));
+        // wp_enqueue_script('woo-scroll-to-js', plugins_url('/bootstrap/js/bootstrap.min.js', __FILE__), array('jquery'));
         wp_enqueue_script('woo-scroll-to-js', plugins_url('/js/jquery.scrollTo-1.4.3.1-min.js', __FILE__), array('jquery'));
     }
 
@@ -59,7 +59,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 
     function woo_admin_actions()
     {
-        add_options_page("Help", "WooCommerce Category Product", 1, "Help", "woo_help");
+        add_options_page("Help", "Woo Tabbed Category Product Listing", 1, "Help", "woo_help");
     }
 
 
@@ -68,9 +68,9 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
         ?>
         <div class='wrap'>
             <?php get_screen_icon(); ?>
-            <h3>Use the shortcode [product-cat] inside any WordPress post or page to view category wise WooCommerce
-                product listing. </h3>
-            <h4>WooCommerce must be installed to use this plugin.</h4>
+            <h3>Use the shortcode [product-cat] inside any WordPress post or page to show category wise WooCommerce
+                product listing in tabbed format. </h3>
+            <h4>WooCommerce must be installed 1st to use this plugin.</h4>
         </div>
 
 
@@ -166,5 +166,22 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 
     add_shortcode('product-cat', 'load_cat_product');
 } else {
-    echo "<h1 style='color:red;'>WooCommerce must be activated before activate this plugin. Otherwise this plugin will not work.</h1>";
+    add_action('admin_notices', 'woo_notice');
+
 }
+
+
+function woo_notice()
+{
+    ?>
+
+    <div class="error notice">
+        <p>
+            <strong><?php _e('Please install WooCommerce first as it is required for Woo Tabbed Category Product Listing plugin to work properly.', 'my_plugin_textdomain'); ?></strong>
+        </p>
+    </div>
+
+<?php
+}
+
+
