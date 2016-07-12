@@ -31,6 +31,7 @@ Support Plugin Page: http://www.quantumcloud.com/blog/woocommerce-tabbed-categor
 5. You are done.
 
 ==Frequently Asked Questions==
+
 Please check: http://www.quantumcloud.com/blog/woocommerce-tabbed-category-wise-product-listing/ 
 
 
