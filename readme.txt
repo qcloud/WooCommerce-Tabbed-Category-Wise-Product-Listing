@@ -36,10 +36,11 @@ Please check: http://www.quantumcloud.com/blog/woocommerce-tabbed-category-wise-
 ==Use==
 
 1. After activating the plugin, create a new page or post. In the body section write this shortcode 
-`[product-cat]`.
+[wtcpl-product-cat].
 
 2. Save the page/post and check the page in front end. You'll see a nicely designed category wise product listing.
 
+3. Under the settings page in admin you can find the help in "Tabbed Category" menu.
 ==Screenshots==
 
 1. Front End

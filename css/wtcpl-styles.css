@@ -1,4 +1,4 @@
-.product_container {
+.wtcpl_container {
     margin: 0 auto;
     width: 100%;
 }
@@ -15,33 +15,26 @@
     border-radius: 5px;
 }
 
-.woo_category_nav-left {
-    float: left;
-}
 
-.woo_category_navigation {
-    width: 100%;
-    float: left;
-}
 
-.woo_category_nav {
+.wtcpl_category_nav {
     margin: 0;
     padding: 10px 0 0 0;
 }
 
-.woo_category_nav ul {
+.wtcpl_category_nav ul {
     margin: 0;
     padding: 0;
 }
 
-.woo_category_nav li {
+.wtcpl_category_nav li {
     list-style: none;
     display: inline-block;
     margin: 2px 0 !important;
     padding: 0 !important;
 }
 
-.woo_category_nav li a:link, .woo_category_nav li a:visited, .woo_category_nav li a:active {
+.wtcpl_category_nav li a:link, .wtcpl_category_nav li a:visited, .wtcpl_category_nav li a:active {
     text-decoration: none;
     display: block;
     color: #000000;
@@ -55,7 +48,7 @@
 
 }
 
-.woo_category_nav li a:hover, .woo_category_nav li a.active {
+.wtcpl_category_nav li a:hover, .wtcpl_category_nav li a.active {
     background-color: #FFFFFF;
     color: #000000;
 }
@@ -72,7 +65,7 @@
     -webkit-border-radius: 5px;
 }
 
-#tabs_container .each_cat {
+#wtcpl_tabs_container .each_cat {
     display: none;
 }
 
@@ -80,7 +73,7 @@
     clear: both;
 }
 
-#tabs_container .each_cat.active {
+#wtcpl_tabs_container .each_cat.active {
     display: block;
 }
 
@@ -95,26 +88,26 @@
         margin-right: 20px !important;
     }
 
-    .woo_category_nav {
+    .wtcpl_category_nav {
         clear: both;
         padding: 10px 0;
         margin-bottom: 10px;
     }
 
-    .woo_category_nav ul {
+    .wtcpl_category_nav ul {
         margin: 0 !important;
         padding: 0 !important;
 
     }
 
-    .woo_category_nav li {
+    .wtcpl_category_nav li {
         list-style: none;
         display: block;
         margin: 2px 0 !important;
         padding: 0 !important;
     }
 
-    .woo_category_nav li a:link, .woo_category_nav li a:visited, .woo_category_nav li a:active {
+    .wtcpl_category_nav li a:link, .wtcpl_category_nav li a:visited, .wtcpl_category_nav li a:active {
         text-decoration: none;
         display: block;
         color: #000000;
@@ -130,12 +123,12 @@
 
     }
 
-    .woo_category_nav li a:hover, .woo_category_nav li a.active {
+    .wtcpl_category_nav li a:hover, .wtcpl_category_nav li a.active {
         background-color: #FFFFFF;
         color: #000000;
     }
 
-    .woo_category_nav ul li a {
+    .wtcpl_category_nav ul li a {
         border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
