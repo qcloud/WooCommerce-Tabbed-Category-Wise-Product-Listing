@@ -1,3 +1,7 @@
+This plugin is no longer being maintained in github. Please check https://wordpress.org/plugins/woo-tabbed-category-product-listing/ for latest version of the plugin.
+
+Thanks
+
 Woo Tabbed Category Product Listing
 ================================================
 
