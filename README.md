@@ -13,6 +13,7 @@ Woo Tabbed Category Product Listing
 
 
 ==Description==
+This plugin is no longer being maintained in github. Please check https://wordpress.org/plugins/woo-tabbed-category-product-listing/ for latest version of the plugin.
 
 Have you ever needed a WooCommerce plugin that allows you to showcase products category wise in tabbed format? Woo Tabbed Category Product Listing is a woocommerce plugin that allows you to achieve this result in the easiest way.
 
